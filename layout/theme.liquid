@@ -307,6 +307,10 @@
       >
     {%- endif -%}
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
     <script>
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
@@ -314,7 +318,7 @@
     </script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} enable-product-ab-test enable-ab-test-cart-product enable-round-product-collection enable-views-carousel enable-big-product-homepage">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -388,5 +392,61 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <!-- Initialize Reviews Swiper -->
+    <script>
+      var swiper = new Swiper(".reviewSlider", {
+        slidesPerView: 2,
+        spaceBetween: 15,
+        breakpoints: {
+        320: {
+          slidesPerView: 1.2,
+          spaceBetween: 16,
+        },
+        640: {
+          slidesPerView: 2.3,
+          spaceBetween: 16  ,
+        },
+        768: {
+          slidesPerView: 3.5,
+          spaceBetween: 16,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+        },
+      },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+    <script>
+       $('.plus').click(function() {
+            let currentValue = parseInt($('#quantity').val());
+            $('#quantity').val(currentValue + 1);
+        });
+
+        $('.minus').click(function() {
+            let currentValue = parseInt($('#quantity').val());
+            if (currentValue > 1) {
+                $('#quantity').val(currentValue - 1);
+            }
+        });
+
+        $('.accordion-title').click(function(){
+          $('.main-accordion-homepage-product').removeClass('show-accordion');
+            $(this).parent().addClass('show-accordion').find('.accordion-body').slideToggle(250);
+            // $(this).toggleClass('plus-minus');
+        });
+    </script>
   </body>
 </html>
