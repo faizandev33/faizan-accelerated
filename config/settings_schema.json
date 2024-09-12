@@ -1414,6 +1414,21 @@
     ]
   },
   {
+    "name": "Toggle Trust Section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Collection's Trust Section"
+      },
+      {
+        "type": "checkbox",
+        "id": "trustSection",
+        "label": "Enable Trust Section",
+        "default": true
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.cart.name",
     "settings": [
       {
