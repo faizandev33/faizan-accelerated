@@ -156,7 +156,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 /* Reviews AB Test */
 
 .d-none{
-  display:none;
+  display:none !important;
 }
 .reviews-name-img {
   display: flex;
@@ -213,9 +213,9 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   margin: 2em 0 0;
 }
 
-/* .enable-views-carousel .reviews__carousel-main {
+.enable-views-carousel .reviews__carousel-main {
   display: block;
-} */
+}
 
 .reviews__carousel-main .swiper-pagination-bullet {
   width: 10px;
