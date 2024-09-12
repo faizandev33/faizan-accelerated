@@ -155,9 +155,6 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
 /* Reviews AB Test */
 
-.d-none{
-  display:none !important;
-}
 .reviews-name-img {
   display: flex;
   align-items: center;
