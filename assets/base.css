@@ -213,9 +213,9 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   margin: 2em 0 0;
 }
 
-.enable-views-carousel .reviews__carousel-main {
+/* .enable-views-carousel .reviews__carousel-main {
   display: block;
-}
+} */
 
 .reviews__carousel-main .swiper-pagination-bullet {
   width: 10px;
