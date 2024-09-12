@@ -153,8 +153,11 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
 
 
-/* Reviews Product AB Test */
+/* Reviews AB Test */
 
+.d-none{
+  display:none;
+}
 .reviews-name-img {
   display: flex;
   align-items: center;
