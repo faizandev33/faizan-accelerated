@@ -318,7 +318,7 @@
     </script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} enable-product-ab-test enable-ab-test-cart-product enable-round-product-collection enable-views-carousel enable-big-product-homepage">
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} enable-views-carousel">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -428,25 +428,6 @@
           clickable: true,
         },
       });
-    </script>
-    <script>
-       $('.plus').click(function() {
-            let currentValue = parseInt($('#quantity').val());
-            $('#quantity').val(currentValue + 1);
-        });
-
-        $('.minus').click(function() {
-            let currentValue = parseInt($('#quantity').val());
-            if (currentValue > 1) {
-                $('#quantity').val(currentValue - 1);
-            }
-        });
-
-        $('.accordion-title').click(function(){
-          $('.main-accordion-homepage-product').removeClass('show-accordion');
-            $(this).parent().addClass('show-accordion').find('.accordion-body').slideToggle(250);
-            // $(this).toggleClass('plus-minus');
-        });
     </script>
   </body>
 </html>
