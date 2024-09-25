@@ -184,8 +184,9 @@
               {% render 'pagination', paginate: paginate, anchor: '' %}
             {%- endif -%}
             </div>
-            {{ settings.trust_section }}
-            {% if settings.trust_section == "show" %}
+            {{ section.settings.trust_section }}
+          
+            {% if section.settings.trust_section == "show" %}
             <div class="reviews__carousel-main">
               <div class="page-width">
                 <div class="reviews__carousel-align">
